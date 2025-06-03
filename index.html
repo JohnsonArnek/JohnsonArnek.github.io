@@ -1,0 +1,15 @@
+---
+layout: home # Or 'default' depending on your theme
+title: Home
+---
+
+## Recent Posts
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+    </li>
+  {% endfor %}
+</ul>
+
+[See all posts](/archive.html) <!-- You'd need to create an archive page -->
