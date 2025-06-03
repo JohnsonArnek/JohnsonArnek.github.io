@@ -1,6 +1,6 @@
-title: My Awesome Blog
-author: Your Name
-email: your.email@example.com
+title: Idea Graveyard
+author: VB
+email: vlasisbechrakis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is my personal blog where I write about cool stuff.
 baseurl: "" # the subpath of your site, e.g. /blog. For a user site (your-username.github.io), this is usually empty.
