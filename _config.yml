@@ -1,0 +1,18 @@
+title: My Awesome Blog
+author: Your Name
+email: your.email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  This is my personal blog where I write about cool stuff.
+baseurl: "" # the subpath of your site, e.g. /blog. For a user site (your-username.github.io), this is usually empty.
+url: "https://your-username.github.io" # your site's main URL
+github_username: your-username
+# For most themes, you'll specify the theme gem:
+theme: minima # Example: Minima is a popular default Jekyll theme
+# For themes supported directly by GitHub Pages, you might use remote_theme:
+# remote_theme: owner/theme-name
+# Example: remote_theme: jekyll/minima
+
+# Plugins (Minima comes with jekyll-feed and jekyll-seo)
+plugins:
+  - jekyll-feed
+  - jekyll-seo
