@@ -1,0 +1,16 @@
+---
+layout: post # Tells Jekyll to use the 'post' layout from your theme
+title: "My First Awesome Blog Post!"
+date: 2023-10-27 10:00:00 -0000 # Optional, Jekyll uses filename if not present
+categories: jekyll update
+---
+
+Welcome to my new blog! This is my very first post.
+
+## Markdown is Cool
+
+You can write in **Markdown**, which is super easy.
+
+*   Lists
+*   Are
+*   Easy
