@@ -2,17 +2,18 @@ title: Idea Graveyard
 author: VB
 email: vlasisbechrakis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my personal blog where I write about cool stuff.
-baseurl: "" # the subpath of your site, e.g. /blog. For a user site (your-username.github.io), this is usually empty.
-url: "https://your-username.github.io" # your site's main URL
-github_username: your-username
-# For most themes, you'll specify the theme gem:
-theme: minima # Example: Minima is a popular default Jekyll theme
-# For themes supported directly by GitHub Pages, you might use remote_theme:
-# remote_theme: owner/theme-name
-# Example: remote_theme: jekyll/minima
+  A space for my random writings and a showcase of my projects.
+url: "https://JohnsonArnek.github.io" # Replace with your actual GitHub Pages URL
+                                     # If it's a project page: https://your-username.github.io/your-repo-name
+baseurl: "" # If your site is at the root (e.g., your-username.github.io), leave this empty.
+            # If it's in a subfolder (e.g., your-username.github.io/my-blog), set it to "/my-blog".
 
-# Plugins (Minima comes with jekyll-feed and jekyll-seo)
-plugins:
-  - jekyll-feed
-  - jekyll-seo
+# Minima theme specific (if you're using Minima)
+minima:
+  # Minima specific settings can go here, like social links
+  social_links:
+    twitter: your_twitter_username
+    github: your_github_username
+    # linkedin: your_linkedin_username
+    # dribbble: your_dribbble_username
+    # etc.
