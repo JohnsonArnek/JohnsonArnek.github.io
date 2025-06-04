@@ -1,80 +1,52 @@
 ---
-layout: page # Uses the standard page layout from your theme (Minima)
-title: About Me
-permalink: /about/ # Sets the URL to yoursite.com/about/
-# You can add a description for SEO if your theme/SEO plugin uses it
-# description: "Learn more about [Your Name], my background, interests, and what drives this blog and project showcase."
+layout: page
+title: About VB
+permalink: /about/
+description: "Learn more about VB, a professional Jack of all trades, master of none, and the mind behind the Idea Graveyard."
 ---
 
-<!-- Tip: You can use HTML in your Markdown files if you need more complex layout, but try to stick to Markdown for simplicity. -->
-
 <div class="about-container">
-
-  <!-- Optional: If you want to include an image -->
-  <!-- 
-  <div class="profile-image-container">
-    <img src="/assets/images/your-profile-picture.jpg" alt="A picture of [Your Name]" class="profile-picture">
-  </div>
-  -->
-
   <div class="about-content">
-    <!-- This is where you introduce yourself. Be authentic! -->
-    <p>Hello! I'm <strong>[Your Name]</strong>, and welcome to my little corner of the internet. I'm a [Your Profession/Role, e.g., "software developer", "curious student", "lifelong learner", "creative writer"] based in [Your City/Region, optional].</p>
+    <p>Hello! I'm <strong>VB</strong>, the curator of this "Idea Graveyard." I identify as a professional Jack of all trades, master of none, driven by an insatiable curiosity that spans a multitude of domains.</p>
 
-    <p>This website serves as a space for me to share my [e.g., "thoughts on technology", "creative writing pieces", "learnings from various projects", "explorations in data science"] and to showcase some of the projects I've been passionate about building.</p>
+    <p>This website is my digital workshop and archive – a place where ideas, both fleeting and persistent, are explored, documented, and sometimes laid to rest. It's a reflection of my journey through diverse interests, from the structured logic of coding and economics to the boundless creativity of art and writing, and the ever-evolving landscapes of AI, technological progress, history, and politics.</p>
 
-    <h2>My Interests</h2>
-    <p>I'm particularly interested in:</p>
+    <h2>A Tapestry of Interests</h2>
+    <p>My mind rarely stays still. I find myself constantly drawn to:</p>
     <ul>
-      <li>[Interest 1, e.g., Artificial Intelligence and its ethical implications]</li>
-      <li>[Interest 2, e.g., Open source software and community building]</li>
-      <li>[Interest 3, e.g., The art of storytelling in different mediums]
-      <li>[Add more as you like]</li>
+      <li><strong>Side Projects:</strong> The thrill of building something new, no matter how small or experimental.</li>
+      <li><strong>Art & Creativity:</strong> Exploring different mediums and forms of expression.</li>
+      <li><strong>Artificial Intelligence:</strong> Its potential, its implications, and its intersection with humanity.</li>
+      <li><strong>Writing:</strong> From technical documentation to speculative fiction, a way to clarify thoughts and share stories.</li>
+      <li><strong>Coding:</strong> The art of problem-solving and creating with logic.</li>
+      <li><strong>Business & Economics:</strong> Understanding the systems that shape our world.</li>
+      <li><strong>Reading:</strong> Voraciously consuming knowledge across genres.</li>
+      <li><strong>Politics & History:</strong> Learning from the past to understand the present and future.</li>
+      <li><strong>Technological Progress:</strong> How innovation shapes society and individual lives.</li>
+      <li>...and truly, much more!</li>
     </ul>
 
-    <h2>Background & Journey (Optional)</h2>
-    <p>My journey into [Your Field/Primary Interest] began when [brief story or motivation]. Since then, I've [mention key experiences, education, or milestones briefly].</p>
-    <!-- Example: 
-    <p>My journey into software development began with a fascination for how websites were built. After teaching myself the basics of HTML and CSS, I dived into JavaScript and later Python. I graduated with a degree in Computer Science from [Your University] and have since worked on various web applications, focusing on [Your Specialization].</p>
-    -->
-
-    <h2>Why This Site?</h2>
-    <p>I believe in the power of sharing knowledge and experiences. Through my writings and projects, I hope to [Your Goal for the site, e.g., "connect with like-minded individuals", "document my learning process", "contribute to discussions in my field", "inspire others to build cool things"].</p>
+    <h2>The Philosophy of the Graveyard</h2>
+    <p>Why an "Idea Graveyard"? Because not all ideas need to become fully realized masterpieces to be valuable. Some are stepping stones, some are thought experiments, and some are simply enjoyable explorations. This site is about celebrating the process of thinking, learning, and creating, without the pressure of perfection or completion for every single concept.</p>
+    <p>Here, you'll find a mix of finished pieces, works-in-progress, and perhaps even a few well-documented "failures" – because there's learning in every outcome.</p>
 
     <h2>Get in Touch</h2>
-    <p>I'm always open to connecting with new people, discussing ideas, or potential collaborations. You can reach me via:</p>
+    <p>I'm always open to discussing new ideas, collaborating on intriguing projects, or just connecting with fellow curious minds. The best way to reach me is via email:</p>
     <ul>
-      <li><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a> (Make sure `email` is set in your `_config.yml`)</li>
-      <!-- Add other contact methods or links to social profiles if not covered by theme's social links -->
-      <!-- Example for LinkedIn if not in Minima's footer social links:
-      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">My LinkedIn Profile</a></li>
-      -->
+      <li><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
     </ul>
-    <p>You can also find me on the platforms linked in the footer.</p>
-
   </div>
 </div>
 
-<!-- Optional: Some basic SASS/CSS for this page. You would move this to your _sass/custom/_layout.scss or a new _about.scss -->
-<!-- For now, keeping it inline for simplicity during creation -->
+<!-- 
+  If you move styles later, this can go into _sass/custom/_about.scss or _sass/custom/_layout.scss
+  and be imported by assets/css/main.scss
+-->
 <style>
-  .about-container {
-    /* max-width: 800px; You might control this via a .wrapper class in _layout.scss */
-    /* margin: 0 auto; */
-  }
-  .profile-image-container {
-    text-align: center;
-    margin-bottom: 1.5em;
-  }
-  .profile-picture {
-    max-width: 200px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 50%; /* Circular image */
-    border: 3px solid #eee; /* Optional border */
-  }
-  .about-content h2 {
-    margin-top: 1.8em;
-    margin-bottom: 0.8em;
+  .about-container { }
+  .about-content h2 { margin-top: 1.8em; margin-bottom: 0.8em; }
+  .about-content p, .about-content ul { line-height: 1.7; }
+</style>
   }
   .about-content p, .about-content ul {
     line-height: 1.7;
