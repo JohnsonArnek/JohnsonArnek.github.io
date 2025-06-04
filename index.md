@@ -60,8 +60,12 @@ title: Welcome # This is often used for the <title> tag, not necessarily display
         </div>
       {% endfor %}
     </div>
-    {% if site.projects.size > 3 or (featured_projects.size < site.projects.size and featured_projects.size > 0) %}
-      <p class="view-all-link"><a href="{{ "/projects/" | relative_url }}">Explore all projects …</a></p>
+{% assign total_projects = site.projects.size %}
+{% assign num_featured = featured_projects.size %}
+
+{% if total_projects > 3 or (num_featured > 0 and num_featured < total_projects) %}
+  <p class="view-all-link"><a href="{{ "/projects/" | relative_url }}">Explore all projects …</a></p>
+{% endif %}      <p class="view-all-link"><a href="{{ "/projects/" | relative_url }}">Explore all projects …</a></p>
     {% endif %}
   {% else %}
     <p>No projects to showcase yet. Check back soon!</p>
