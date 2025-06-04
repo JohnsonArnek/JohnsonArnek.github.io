@@ -1,0 +1,20 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Import Minima's core styles (if you want to build upon them)
+// You might need to adjust this path if you've customized Minima extensively
+// or are using a different theme structure.
+// For a standard Minima gem-based theme, this line might be tricky to get right
+// if you haven't "ejected" Minima's SASS files.
+// A common way to include Minima's styles when customizing is to copy
+// its _sass folder into your project and import 'minima'.
+// For now, let's assume Minima's base styles are loaded.
+
+// Import your custom SASS partials
+@import "custom/variables";    // Your custom variables (colors, fonts, etc.)
+@import "custom/layout";       // General layout adjustments
+@import "custom/projects";     // Styles specifically for project listings and details
+// Add more imports as your site grows
