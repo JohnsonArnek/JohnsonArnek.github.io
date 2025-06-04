@@ -1,0 +1,131 @@
+---
+# This front matter in a layout file is optional but can be used for defaults.
+# For instance, if most project_detail pages should inherit from 'default.html':
+layout: default # Assumes you have a _layouts/default.html from your theme (Minima provides this)
+---
+<article class="project-detail-page">
+
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    
+    {% if page.short_description %}
+      <p class="project-subtitle">{{ page.short_description }}</p>
+    {% endif %}
+
+    <div class="project-meta">
+      {% if page.status %}
+        <span class="meta-item"><strong>Status:</strong> {{ page.status }}</span>
+      {% endif %}
+      {% if page.date_completed %}
+        <span class="meta-item"><strong>Completed:</strong> 
+          {% if page.date_completed contains "-" %} <!-- Crude check for a date vs a phrase -->
+            {{ page.date_completed | date: "%B %d, %Y" }}
+          {% else %}
+            {{ page.date_completed }}
+          {% endif %}
+        </span>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.image %}
+    <div class="project-image-container">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" class="project-main-image">
+    </div>
+  {% endif %}
+
+  <div class="project-content">
+    {{ content }} {# This is where the Markdown content from your _projects/*.md file goes #}
+  </div>
+
+  <div class="project-links">
+    {% if page.live_demo_url %}
+      <a href="{{ page.live_demo_url }}" class="button project-link-button" target="_blank" rel="noopener noreferrer">View Live Demo</a>
+    {% endif %}
+    {% if page.repo_url %}
+      <a href="{{ page.repo_url }}" class="button project-link-button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    {% endif %}
+  </div>
+
+  {% if page.technologies and page.technologies.size > 0 %}
+    <div class="project-technologies-section">
+      <h3>Technologies Used:</h3>
+      <ul class="technologies-list">
+        {% for tech in page.technologies %}
+          <li>{{ tech }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  {% if page.key_features and page.key_features.size > 0 %}
+    <div class="project-key-features-section">
+      <h3>Key Features:</h3>
+      <ul class="key-features-list">
+        {% for feature in page.key_features %}
+          <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <nav class="project-navigation">
+    {% assign projects_sorted = site.projects | sort: "date_completed" | reverse %}
+    {% for project_item in projects_sorted %}
+        {% if project_item.url == page.url %}
+            {% assign current_index = forloop.index0 %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign next_index = current_index | minus: 1 %}
+    {% assign prev_index = current_index | plus: 1 %}
+
+    {% if prev_index < projects_sorted.size %}
+        {% assign prev_project = projects_sorted[prev_index] %}
+        <a href="{{ prev_project.url | relative_url }}" class="prev-project">« Previous Project: {{ prev_project.title }}</a>
+    {% endif %}
+
+    {% if next_index >= 0 %}
+        {% assign next_project = projects_sorted[next_index] %}
+        <a href="{{ next_project.url | relative_url }}" class="next-project">Next Project: {{ next_project.title }} »</a>
+    {% endif %}
+</nav>
+
+
+</article>
+
+<!-- Basic styling (you'll want to move this to your SASS/CSS file in Step 5) -->
+<style>
+  .project-detail-page .project-header { margin-bottom: 1.5em; text-align: center; }
+  .project-detail-page .project-header h1 { margin-bottom: 0.2em; }
+  .project-detail-page .project-subtitle { font-size: 1.2em; color: #666; margin-top: 0; }
+  .project-detail-page .project-meta { font-size: 0.9em; color: #777; margin-bottom: 1em; }
+  .project-detail-page .project-meta .meta-item { margin-right: 1em; }
+  .project-detail-page .project-image-container { margin-bottom: 1.5em; text-align: center; }
+  .project-detail-page .project-main-image { max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  .project-detail-page .project-content { margin-bottom: 2em; line-height: 1.7; }
+  .project-detail-page .project-links { margin-bottom: 2em; text-align: center; }
+  .project-detail-page .project-links .button { 
+    display: inline-block; padding: 10px 20px; margin: 0 10px; 
+    background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;
+  }
+  .project-detail-page .project-links .button:hover { background-color: #0056b3; }
+  .project-detail-page .project-technologies-section, 
+  .project-detail-page .project-key-features-section { margin-bottom: 1.5em; }
+  .project-detail-page .technologies-list, 
+  .project-detail-page .key-features-list { list-style: disc; padding-left: 20px; }
+  .project-detail-page .project-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+  }
+  .project-detail-page .project-navigation a {
+    text-decoration: none;
+    color: #007bff;
+  }
+   .project-detail-page .project-navigation a:hover {
+    text-decoration: underline;
+  }
+</style>
