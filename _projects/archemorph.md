@@ -3,7 +3,7 @@ layout: project_detail
 title: "ArcheMorph: An AI-Powered Personality Test"
 short_description: "An AI-powered personality test designed to reveal unique archetypal blends based on user responses."
 status: "Completed"
-date_completed: 2024-07-01 # Please verify/correct this date
+date_completed: 2025-06-01 # Please verify/correct this date
 
 live_demo_url: "https://pasx71.github.io/"
 # repo_url: "" # Add this if/when you have a public repo for it
