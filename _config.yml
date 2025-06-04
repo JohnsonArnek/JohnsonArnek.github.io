@@ -1,20 +1,24 @@
+# Site settings
 title: Idea Graveyard
 author: VB
 email: vlasisbechrakis@gmail.com
-# Site settings
-description: >-
-  Exploring the analytical engine, poetry, and the intersection of art and science.
-url: "https://JohnsonArnek.github.io" # Assuming this is a user page
-baseurl: ""
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to VB's Idea Graveyard – a space for exploring side projects, art, AI, writing, coding,
+  business, economics, reading, politics, history, technological progress, and the myriad of
+  ideas that spring from a Jack of all trades. Dive into a diverse collection of thoughts and creations.
+# social_links: # You can uncomment and add these later if you decide to
+  # twitter: your_twitter_username
+  # github:  your_github_username # You can add this later when you decide which account
+  # linkedin: your_linkedin_profile
+
+# GitHub Pages URL and BaseURL settings
+# For a user/organization site like https://johnsonarnek.github.io/
+# the repository name MUST BE JohnsonArnek.github.io
+url: "https://johnsonarnek.github.io"
+baseurl: "" # For a user/organization site at the root, baseurl is an empty string
 
 # Theme
 theme: minima
-
-# Minima specific settings
-minima:
-  social_links:
-    github: adalovelace
-    # Add other social links
 
 # Plugins
 plugins:
@@ -30,14 +34,14 @@ collections:
 # Header navigation pages (for Minima theme)
 header_pages:
   - about.md
-  - blog.md
-  - projects.md
+  - blog.md      # For your "Writings"
+  - projects.md  # For your "Side Projects"
 
-# Build settings (you might not need to change these for now)
+# Build settings
 markdown: kramdown
 kramdown:
-  input: GFM # Enables GitHub Flavored Markdown features
-  hard_wrap: false
+  input: GFM # Enables GitHub Flavored Markdown features like tables, fenced code blocks
+  hard_wrap: false # Set to true if you want single newlines in Markdown to become <br> tags
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -56,3 +60,4 @@ exclude:
   - vendor/ruby/
   - README.md
   - LICENSE.txt
+  # - .github/ # If you don't want workflow files in the final site (usually not needed to exclude)
