@@ -3,7 +3,7 @@ layout: project_detail
 title: "ArcheMorph: A Deep Dive into a Client-Side Personality Profiler"
 short_description: "A multifaceted personality profiling system providing users with a 4-part archetype and analysis of 16 psychological factors, processed entirely client-side."
 status: "Completed"
-date_completed: 2024-07-01 # Using our previously assumed date; please correct if needed.
+date_completed: 2025-06-01 # Using our previously assumed date; please correct if needed.
 
 live_demo_url: "https://pasx71.github.io/"
 # repo_url: "" # Add this if you have a public code repository link
