@@ -1,4 +1,35 @@
-# Building ArcheMorph: A Deep Dive into a Client-Side Personality Profiler
+---
+layout: project_detail
+title: "ArcheMorph: A Deep Dive into a Client-Side Personality Profiler"
+short_description: "A multifaceted personality profiling system providing users with a 4-part archetype and analysis of 16 psychological factors, processed entirely client-side."
+status: "Completed"
+date_completed: 2024-07-01 # Using our previously assumed date; please correct if needed.
+
+live_demo_url: "https://pasx71.github.io/"
+# repo_url: "" # Add this if you have a public code repository link
+
+# image: /assets/images/project-screenshots/archemorph-main-interface.png # Suggestion: A screenshot of the main quiz or results page
+# image_alt: "Main interface of the ArcheMorph personality profiler"
+
+technologies:
+  - HTML
+  - CSS
+  - JavaScript (Vanilla JS)
+  - Client-Side Data Management (data.js)
+  - Dynamic DOM Manipulation
+  - Print-Optimized CSS
+  - Dark Theme UI/UX
+
+key_features:
+  - "Purely client-side processing for privacy and speed."
+  - "Dynamic quiz generation (145 questions across 14 primary axes)."
+  - "Complex archetype name generation (65,536+ combinations) based on 16 trait scores."
+  - "Nuanced result blurbs for High, Moderate, and Low trait scores, including alternative archetype suggestions."
+  - "Static site structure with consistent navigation and informational pages."
+  - "Dark theme with purple accents and teal text."
+
+featured: true # Assuming you still want this featured
+---
 
 As developers, we often encounter projects that blend intriguing concepts with tangible technical challenges. ArcheMorph, a multifaceted personality profiling system, was one such endeavor. This post explores the technical architecture, key decisions, and the development journey of creating this entirely client-side application.
 
@@ -89,5 +120,4 @@ Building ArcheMorph has been a rewarding exercise in creating a feature-rich, cl
 
 ---
 
-*You can explore the ArcheMorph system [here](https://pasx71.github.io/) (assuming this is your link).*
 *(Disclaimer: ArcheMorph is for self-exploration and not a clinical diagnostic tool.)*
