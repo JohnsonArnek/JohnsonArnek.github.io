@@ -36,12 +36,12 @@ title: Welcome # This is often used for the <title> tag, not necessarily display
 
 <section class="home-section">
   <h2><a href="{{ "/projects/" | relative_url }}">Featured Projects</a></h2>
-  {% if site.projects.size > 0 %}
+  {% if site.projects.size > 0 %} {# OPENING IF for site.projects.size > 0 #}
     <div class="featured-projects-grid">
       {% assign featured_projects = site.projects | where_exp: "project", "project.featured == true" | limit: 3 %}
-      {% if featured_projects.size == 0 %}
+      {% if featured_projects.size == 0 %} {# OPENING IF for fallback #}
         {% assign featured_projects = site.projects | limit:3 %} {# Fallback to latest 3 if none are marked 'featured' #}
-      {% endif %}
+      {% endif %} {# CLOSING IF for fallback #}
 
       {% for project in featured_projects %}
         <div class="project-card">
@@ -60,20 +60,29 @@ title: Welcome # This is often used for the <title> tag, not necessarily display
         </div>
       {% endfor %}
     </div>
-{% assign total_projects = site.projects.size %}
-{% assign num_featured = featured_projects.size %}
+    
+    {# Logic for the "Explore all projects..." link #}
+    {% assign total_projects = site.projects.size %}
+    {% assign num_featured_shown = featured_projects.size %} {# Use a different variable name to avoid confusion #}
 
-{% if total_projects > 3 or (num_featured > 0 and num_featured < total_projects) %}
-  <p class="view-all-link"><a href="{{ "/projects/" | relative_url }}">Explore all projects …</a></p>
-{% endif %}      <p class="view-all-link"><a href="{{ "/projects/" | relative_url }}">Explore all projects …</a></p>
+    {% if total_projects > 3 or (num_featured_shown > 0 and num_featured_shown < total_projects) %}
+      <p class="view-all-link"><a href="{{ "/projects/" | relative_url }}">Explore all projects …</a></p>
     {% endif %}
-  {% else %}
+    
+  {% else %} {# ELSE for site.projects.size > 0 #}
     <p>No projects to showcase yet. Check back soon!</p>
-  {% endif %}
+  {% endif %} {# CLOSING IF for site.projects.size > 0 #}
 </section>
 
-<!-- Basic SASS/CSS for this page. You would move this to your SASS files. -->
-<!-- For now, keeping it inline for simplicity during creation -->
+<!-- 
+  REMEMBER TO MOVE THESE STYLES TO YOUR SASS FILES LATER!
+  This <style> block is for temporary visual feedback during development.
+  It should be removed from here and its contents integrated into:
+  - _sass/custom/_homepage.scss (for general homepage section styling)
+  - _sass/custom/_posts.scss (for .post-list-condensed styles if used elsewhere)
+  - _sass/custom/_projects.scss (for .project-card styles if used elsewhere or make specific homepage versions)
+  And then import those files into assets/css/main.scss
+-->
 <style>
   .home-intro { text-align: center; margin-bottom: 2.5em; }
   .home-intro h1 { margin-bottom: 0.3em; }
