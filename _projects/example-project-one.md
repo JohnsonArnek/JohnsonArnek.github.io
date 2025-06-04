@@ -1,22 +1,16 @@
 ---
-layout: project_detail # We'll create this layout in Step 4
-title: "Example Project One: A Web Utility"
-short_description: "A handy web utility that solves a common problem efficiently." # For project listings
+title: "ArcheMorph"
+short_description: "A new personality quiz." # For project listings
 status: "Completed" # e.g., "In Progress", "Completed", "Archived", "Concept"
-date_completed: 2023-08-15 # Or a general timeframe like "Summer 2023"
+date_completed: 2025-06-01 # Or a general timeframe like "Summer 2023"
 
 # Links
-repo_url: "https://github.com/your-username/example-project-one-repo" # Optional
-live_demo_url: "https://example-project-one-demo.com" # Optional
+repo_url: "https://github.com/Pasx71/Pasx71.github.io" # Optional
+live_demo_url: "https://pasx71.github.io/" # Optional
 
-# Visuals
-image: /assets/images/project-screenshots/example-project-one-feature.png # Optional: Path to a screenshot
-image_alt: "Screenshot showing the main feature of Example Project One"
 
 # Technical Details
 technologies: 
-  - Python
-  - Flask
   - JavaScript
   - HTML5
   - CSS3
@@ -25,7 +19,7 @@ technologies:
 key_features:
   - "User-friendly interface"
   - "Fast processing"
-  - "Mobile responsive"
+  - "Fun"
 ---
 
 ## About This Project
